@@ -1,0 +1,15 @@
+fragment HomeHero on HomeHero {
+  stage
+  remoteId: id
+  createdAt
+  updatedAt
+  publishedAt
+  homeHeroImage {
+    ... on Asset {
+      remoteTypeName: __typename
+      remoteId: id
+      locale
+    }
+  }
+  heroTitle
+}
