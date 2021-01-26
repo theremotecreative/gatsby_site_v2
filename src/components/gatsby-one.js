@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import { useStaticQuery, graphql, Link } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 import Img from "gatsby-image"
 import styled from "styled-components"
 
@@ -49,7 +49,7 @@ const GatsbyOne = () => {
                 </SectionCol>
                 <SectionCol>
                     <h1>The Benefits of Gatsby.js</h1>
-                    <p>Udemy named Gatsby.js the <a href="https://business.udemy.com/resources/5-workplace-learning-trends-2020/" target="_blank">number one emerging tech trend of 2020.</a> As a static site generator built with React, Gatsby creates blazing fast websites and web apps. Combined with an easy Content Management System (CMS) like WordPress, Gatsby is a powerful tool you can use to enhance your web strategy in 2020.</p>
+                    <p>Udemy named Gatsby.js the <a href="https://business.udemy.com/resources/5-workplace-learning-trends-2020/" target="_blank" rel="noreferrer">number one emerging tech trend of 2020.</a> As a static site generator built with React, Gatsby creates blazing fast websites and web apps. Combined with an easy Content Management System (CMS) like WordPress, Gatsby is a powerful tool you can use to enhance your web strategy in 2020.</p>
                 </SectionCol>
             </SectionRow>
         </SectionMain>

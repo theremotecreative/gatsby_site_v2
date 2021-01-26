@@ -1,10 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 
+import ParticleBG from "./particle-bg"
+
 const MissionStatement = () => {
 
     return(
         <SectionMain id="home_mission">
+            <ParticleBG/>
             <p>Based in Chicago, connected from anywhere, the Remote Creative is a web development company interested in the future of technology, communication, and innovation, and how these fields can connect people around the world.</p>
         </SectionMain>
     )
@@ -12,6 +15,7 @@ const MissionStatement = () => {
 }
 
 const SectionMain = styled.div`
+    position: relative;
     min-height: 100vh;
     width: 100%;
     background-color: #272727;

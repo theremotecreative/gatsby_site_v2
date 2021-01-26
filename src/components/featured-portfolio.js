@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import { useStaticQuery, graphql, Link } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 import Img from "gatsby-image"
 import styled from "styled-components"
 
@@ -592,24 +592,6 @@ const RowTwoMain = styled.div`
     }
 `
 
-const TitleSection = styled.div`
-    height: 380px;
-    width: 780px;
-    margin-bottom: 20px;
-    opacity: 0;
-    h2 {
-        font-size: 72px;
-        padding-top: 20px;
-        padding-left: 20px;
-        span {
-            padding-left: 100px;
-        }
-    }
-    @media(max-width: 1240px) {
-        display: none;
-    }
-`
-
 const MobileTitle = styled.div`
     margin-bottom: 20px;
     opacity: 0;
@@ -681,24 +663,6 @@ const RowFour = styled.div`
             &:first-child {
                 margin-right: 0px;
             }
-        }
-    }
-`
-
-const BottomButton = styled.div`
-    text-align: center;
-    margin-top: 35px;
-    a {
-        font-family: "Poppins Light";
-        padding: 5px 20px;
-        display: inline-block;
-        background-color: #272727;
-        text-decoration: none !important;
-        color: #fff !important;
-        border-radius: 25px;
-        transition-duration: .3s;
-        &:hover {
-            background-color: #000; 
         }
     }
 `

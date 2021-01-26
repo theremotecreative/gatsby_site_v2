@@ -57,7 +57,7 @@ const HomeHero = () => {
                 </div>
             </HeroCopy>
             <HeroScroll>
-                <button onClick={() => scrollTo('#home_mission')}><FaChevronDown size={32}/></button>
+                <button onClick={() => scrollTo('#home_mission')} aria-label="Scroll down"><FaChevronDown size={32}/></button>
             </HeroScroll>
         </HomeHeroMain>
     )

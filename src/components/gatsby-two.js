@@ -1,6 +1,4 @@
 import React, { useEffect } from "react"
-import { useStaticQuery, graphql, Link } from 'gatsby'
-import Img from "gatsby-image"
 import styled from "styled-components"
 
 import { FaChartLine } from 'react-icons/fa';
@@ -48,17 +46,17 @@ const GatsbyTwo = () => {
                 <SectionCol>
                     <IconElement><FaWordpress size={44}/></IconElement>
                     <h3>WordPress CMS</h3>
-                    <p>While generating a site, Gatsby pulls dynamic data with <a href="https://graphql.org/" target="_blank">Graphql</a>, a versatile querying language that works with a number of APIs, including the WordPress REST API. This means you can still use the user-friendly WordPress dashboard to create new content, which is then queried and generated through Gatsby.</p>
+                    <p>While generating a site, Gatsby pulls dynamic data with <a href="https://graphql.org/" target="_blank" rel="noreferrer">Graphql</a>, a versatile querying language that works with a number of APIs, including the WordPress REST API. This means you can still use the user-friendly WordPress dashboard to create new content, which is then queried and generated through Gatsby.</p>
                 </SectionCol>
                 <SectionCol>
                     <IconElement><FaReact size={44}/></IconElement>
                     <h3>Popular Technology</h3>
-                    <p>Gatsby uses <a href="https://reactjs.org/" target="_blank">React</a>, which is one of the most popular JavaScript libraries currently used by developers. With the addition of <a href="https://webpack.js.org/" target="_blank">Webpack</a> to bundle scripts and modern CSS, Gatsby sites are always built up-to-date with modern browser trends.</p>
+                    <p>Gatsby uses <a href="https://reactjs.org/" target="_blank" rel="noreferrer">React</a>, which is one of the most popular JavaScript libraries currently used by developers. With the addition of <a href="https://webpack.js.org/" target="_blank" rel="noreferrer">Webpack</a> to bundle scripts and modern CSS, Gatsby sites are always built up-to-date with modern browser trends.</p>
                 </SectionCol>
                 <SectionCol>
                     <IconElement><FaServer size={44}/></IconElement>
                     <h3>Easy Build Process</h3>
-                    <p>Using <a href="https://github.com/" target="_blank">Github</a> as a repository and <a href="https://www.netlify.com/" target="_blank">Netlify</a> to deploy the site, the build process is incredibly easy and efficient, along with the added bonus of being able to collaborate with other developers and revert to older branches. Although a WordPress CMS requires a separate hosting server, most sites can use Netlify’s free plan to manage the Gatsby build.</p>
+                    <p>Using <a href="https://github.com/" target="_blank" rel="noreferrer">Github</a> as a repository and <a href="https://www.netlify.com/" target="_blank" rel="noreferrer">Netlify</a> to deploy the site, the build process is incredibly easy and efficient, along with the added bonus of being able to collaborate with other developers and revert to older branches. Although a WordPress CMS requires a separate hosting server, most sites can use Netlify’s free plan to manage the Gatsby build.</p>
                 </SectionCol>
                 <SectionCol>
                     <IconElement><FaLock size={44}/></IconElement>
