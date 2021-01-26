@@ -137,9 +137,9 @@ const FeaturedPortfolio = () => {
                     }
                 }
             }
-            LexfitThumb: file(relativePath: { eq: "lexfit.jpg" }) {
+            RefineThumb: file(relativePath: { eq: "refine-search.jpg" }) {
                 childImageSharp {
-                    fixed(width: 1400, height: 903) {
+                    fixed(width: 800, height: 534) {
                     ...GatsbyImageSharpFixed
                     }
                 }
@@ -295,12 +295,12 @@ const FeaturedPortfolio = () => {
                     </PortfolioTall>
                     <RowTwoMain>
                         <PortfolioSquare className={"row-four-fadein"}>
-                            <ThumbImg fluid={data.LexfitThumb.childImageSharp.fixed} alt={"Lexfit Thumbnail"}/>
+                            <ThumbImg fluid={data.RefineThumb.childImageSharp.fixed} alt={"Refine Search Thumbnail"}/>
                             <HoverCopy>
-                                <a href="https://lexfitwear.com/" target="_blank" rel="noopener noreferrer">
+                                <a href="https://refinesearch.net/" target="_blank" rel="noopener noreferrer">
                                     <HoverText>
-                                        <h3>LexFit</h3>
-                                        <p>e-Store | Sportswear</p>
+                                        <h3>Refine Search</h3>
+                                        <p>Talent Acquisition</p>
                                     </HoverText>
                                 </a>
                             </HoverCopy>
