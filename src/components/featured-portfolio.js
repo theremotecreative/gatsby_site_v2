@@ -222,7 +222,7 @@ const FeaturedPortfolio = () => {
                                 </a>
                             </HoverCopy>
                         </PortfolioSquare>
-                        <PortfolioSquare className={"row-two-fadein"}>
+                        <PortfolioSquare className={"row-two-fadein desktop-only"}>
                             <ThumbImg fluid={data.twistThumb.childImageSharp.fixed} alt={"Twist Thumbnail"}/>
                             <HoverCopy>
                                 <a href="https://www.twistintegrations.com/" target="_blank" rel="noopener noreferrer">
@@ -233,7 +233,7 @@ const FeaturedPortfolio = () => {
                                 </a>
                             </HoverCopy>
                         </PortfolioSquare>
-                        <PortfolioSquare className={"row-two-fadein"}>
+                        <PortfolioSquare className={"row-two-fadein desktop-only"}>
                             <ThumbImg fluid={data.baizaarThumb.childImageSharp.fixed} alt={"Baizaar Jewelry Thumbnail"}/>
                             <HoverCopy>
                                 <a href="https://baizaarjewelry.com/" target="_blank" rel="noopener noreferrer">
@@ -256,6 +256,30 @@ const FeaturedPortfolio = () => {
                             </a>
                         </HoverCopy>
                     </PortfolioTall>
+                    <MobileRow className={"row-two-fadein mobile-only"}>
+                        <PortfolioSquare className={"row-two-fadein mobile-only"}>
+                            <ThumbImg fluid={data.twistThumb.childImageSharp.fixed} alt={"Twist Thumbnail"}/>
+                            <HoverCopy>
+                                <a href="https://www.twistintegrations.com/" target="_blank" rel="noopener noreferrer">
+                                    <HoverText>
+                                        <h3>Twist</h3>
+                                        <p>Marketing Integration</p>
+                                    </HoverText>
+                                </a>
+                            </HoverCopy>
+                        </PortfolioSquare>
+                        <PortfolioSquare className={"row-two-fadein mobile-only"}>
+                            <ThumbImg fluid={data.baizaarThumb.childImageSharp.fixed} alt={"Baizaar Jewelry Thumbnail"}/>
+                            <HoverCopy>
+                                <a href="https://baizaarjewelry.com/" target="_blank" rel="noopener noreferrer">
+                                    <HoverText>
+                                        <h3>Baizaar</h3>
+                                        <p>e-Store | Jewelry Shop</p>
+                                    </HoverText>
+                                </a>
+                            </HoverCopy>
+                        </PortfolioSquare>
+                    </MobileRow>
                 </RowTwo>
                 <RowThree id="home_portfolio_row_three">
                     <PortfolioSquare className={"row-three-fadein"}>
@@ -316,7 +340,7 @@ const FeaturedPortfolio = () => {
                                 </a>
                             </HoverCopy>
                         </PortfolioSquare>
-                        <PortfolioSquare className={"row-four-fadein"}>
+                        <PortfolioSquare className={"row-four-fadein desktop-only"}>
                             <ThumbImg fluid={data.CakeThumb.childImageSharp.fixed} alt={"Ten Pound Cake Thumbnail"}/>
                             <HoverCopy>
                                 <a href="https://tenpoundcakecompany.com/" target="_blank" rel="noopener noreferrer">
@@ -327,7 +351,7 @@ const FeaturedPortfolio = () => {
                                 </a>
                             </HoverCopy>
                         </PortfolioSquare>
-                        <PortfolioSquare className={"row-four-fadein"}>
+                        <PortfolioSquare className={"row-four-fadein desktop-only"}>
                             <ThumbImg fluid={data.DivenereThumb.childImageSharp.fixed} alt={"DiVenere Law Thumbnail"}/>
                             <HoverCopy>
                                 <a href="https://divenerelaw.com/" target="_blank" rel="noopener noreferrer">
@@ -339,6 +363,30 @@ const FeaturedPortfolio = () => {
                             </HoverCopy>
                         </PortfolioSquare>
                     </RowTwoMain>
+                    <MobileRow>
+                        <PortfolioSquare className={"row-four-fadein mobile-only"}>
+                            <ThumbImg fluid={data.CakeThumb.childImageSharp.fixed} alt={"Ten Pound Cake Thumbnail"}/>
+                            <HoverCopy>
+                                <a href="https://tenpoundcakecompany.com/" target="_blank" rel="noopener noreferrer">
+                                    <HoverText>
+                                        <h3>Ten Pound Cake Company</h3>
+                                        <p>Food Blog | Recipes & Pinterest</p>
+                                    </HoverText>
+                                </a>
+                            </HoverCopy>
+                        </PortfolioSquare>
+                        <PortfolioSquare className={"row-four-fadein mobile-only"}>
+                            <ThumbImg fluid={data.DivenereThumb.childImageSharp.fixed} alt={"DiVenere Law Thumbnail"}/>
+                            <HoverCopy>
+                                <a href="https://divenerelaw.com/" target="_blank" rel="noopener noreferrer">
+                                    <HoverText>
+                                        <h3>DiVenere Law Firm</h3>
+                                        <p>Chicagoland Law Office</p>
+                                    </HoverText>
+                                </a>
+                            </HoverCopy>
+                        </PortfolioSquare>
+                    </MobileRow>
                 </RowFour>
             </PortfolioMain>
         </SectionMain>
@@ -435,6 +483,7 @@ const RowOne = styled.div`
     }
     @media(max-width: 860px) {
         max-width: 100%;
+        margin-bottom: 0;
         > div {
             &:first-child {
                 margin-right: 20px;
@@ -461,6 +510,9 @@ const PortfolioSquare = styled.div`
     position: relative;
     overflow: hidden;
     opacity: 0;
+    &.mobile-only {
+        display: none;
+    }
     ${ThumbImg} {
         max-width: 380px;
         width: 100%;
@@ -473,6 +525,14 @@ const PortfolioSquare = styled.div`
         }
         ${HoverCopy} {
             opacity: 1;
+        }
+    }
+    @media(max-width:1240px) {
+        &.desktop-only {
+            display: none;
+        }
+        &.mobile-only {
+            display: block;
         }
     }
     @media(max-width: 860px) {
@@ -522,12 +582,18 @@ const RowTwo = styled.div`
     margin-bottom: 20px;
     @media(max-width: 1240px) {
         max-width: 780px;
+        flex-wrap: wrap;
     }
     @media(max-width: 860px) {
         max-width: 100%;
+        margin-bottom: 0;
         > div {
             &:first-child {
-                margin-right: 20px;
+                width: calc(50% - 20px);
+                margin-bottom: 0;
+            }
+            &:nth-child(2) {
+                width: 50%;
             }
         }
     }
@@ -538,6 +604,12 @@ const RowTwo = styled.div`
         > div {
             &:first-child {
                 margin-right: 0px;
+                max-width: 380px;
+                width: 100%;
+            }
+            &:nth-child(2) {
+                max-width: 380px;
+                width: 100%;
             }
         }
     }
@@ -590,10 +662,46 @@ const RowTwoMain = styled.div`
         }
     }
     @media(max-width: 860px) {
+        height: auto;
         margin-bottom: 20px;
     }
     ${PortfolioSquare} {
         margin-bottom: 20px;
+    }
+`
+
+const MobileRow = styled.div`
+    display: none;
+    width: 780px;
+    justify-content: space-between;
+    margin-top: 20px;
+    @media(max-width:1240px) {
+        display: flex;
+    }
+    @media(max-width: 860px) {
+        width: 100%;
+        margin-top: 0;
+        > div {
+            &:first-child {
+                width: 50%;
+            }
+            &:last-child {
+                width: calc(50% - 20px);
+            }
+        }
+    }
+    @media(max-width: 767px) {
+        flex-wrap: wrap;
+        > div {
+            &:first-child {
+                max-width: 380px;
+                width: 100%;
+            }
+            &:last-child {
+                max-width: 380px;
+                width: 100%;
+            }
+        }
     }
 `
 
@@ -626,6 +734,7 @@ const RowThree = styled.div`
     }
     @media(max-width: 860px) {
         max-width: 100%;
+        margin-bottom: 0;
         > div {
             &:first-child {
                 margin-right: 20px;
@@ -652,12 +761,17 @@ const RowFour = styled.div`
     margin-bottom: 20px;
     @media(max-width: 1240px) {
         max-width: 780px;
+        flex-wrap: wrap;
     }
     @media(max-width: 860px) {
         max-width: 100%;
         > div {
             &:first-child {
-                margin-right: 20px;
+                width: calc(50% - 20px);
+            }
+            &:nth-child(2) {
+                width: 50%;
+                margin-bottom: 0;
             }
         }
     }
@@ -668,6 +782,12 @@ const RowFour = styled.div`
         > div {
             &:first-child {
                 margin-right: 0px;
+                max-width: 380px;
+                width: 100%;
+            }
+            &:nth-child(2) {
+                max-width: 380px;
+                width: 100%;
             }
         }
     }
