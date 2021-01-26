@@ -29,6 +29,15 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-smoothscroll`,
     {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          "UA-139848739-1", // Google Analytics / GA
+        ],
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `the-remote-creative`,
