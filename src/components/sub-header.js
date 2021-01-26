@@ -66,7 +66,10 @@ class SubHeader extends Component {
               </button> 
             </Hamburger>
             <MobileMenu>
-              <button onClick={() => this.toggleMenu()} aria-label="Close">X</button>
+              <button onClick={() => this.toggleMenu()} aria-label="Close">
+                <div></div>
+                <div></div>
+              </button>
               <ul>
                 <li>
                   <Link
@@ -112,9 +115,32 @@ const MobileMenu = styled.div`
     position: absolute;
     top: 30px;
     right: 30px;
+    height: 24px;
+    width: 24px;
+    padding: 0;
     background-color: transparent;
     border: none;
     outline: 0;
+    > div {
+      &:first-child {
+        position: absolute;
+        top: 11px;
+        left: -3px;
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        transform: rotate(45deg);
+      }
+      &:last-child {
+        position: absolute;
+        bottom: 11px;
+        left: -3px;
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        transform: rotate(-45deg);
+      }
+    }
     &:hover {
       cursor: pointer;
     }
