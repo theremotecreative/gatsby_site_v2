@@ -3,7 +3,7 @@ module.exports = {
     title: `The Remote Creative`,
     description: `Website Design and Development`,
     author: `@theremotecreative`,
-    siteUrl: `https://theremotecreative.com/`,
+    siteUrl: `https://theremotecreative.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -26,6 +26,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-smoothscroll`,
     {
       resolve: `gatsby-plugin-manifest`,
