@@ -369,7 +369,7 @@ const HoverCopy = styled.div`
     }
     @media(max-width: 860px) {
         background-color: transparent;
-        opacity: 1;
+        opacity: 1 !important;
     }
 `
 
@@ -477,6 +477,7 @@ const PortfolioSquare = styled.div`
     }
     @media(max-width: 860px) {
         margin-bottom: 20px;
+        opacity: 1 !important;
     }
 `
 
@@ -509,6 +510,7 @@ const PortfolioLong = styled.div`
     }
     @media(max-width: 860px) {
         margin-bottom: 20px;
+        opacity: 1 !important;
     }
 `
 
@@ -562,6 +564,9 @@ const PortfolioTall = styled.div`
             opacity: 1;
         }
     }
+    @media(max-width:860px) {
+        opacity: 1 !important;
+    }
     @media(max-width: 767px) {
         height: 380px;
         margin-bottom: 20px;
@@ -603,6 +608,7 @@ const MobileTitle = styled.div`
         display: block;
     }
     @media(max-width: 860px) {
+        opacity: 1 !important;
         h2 {
             font-size: 36px;
         }
