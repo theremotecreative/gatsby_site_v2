@@ -48,7 +48,7 @@ const HomeContact = () => {
                 <CopyCol>
                     <h2>about <br/>
                         <span>the creative</span></h2>
-                    <p>Jason has over 5 years of experience working remotely on various web development projects. His niche is WordPress development. He has strong interests in the future of coding, technology, and their implication in global cooperation.</p>
+                    <p>Jason has over 5 years of experience working remotely on various web development projects. He specializes in WordPress and Gatsby.js development. He has strong interests in the future of coding, technology, and their implication in global cooperation.</p>
                     <p>Toolkit:</p>
                     <Toolkit>
                         <p class="lang">HTML</p>

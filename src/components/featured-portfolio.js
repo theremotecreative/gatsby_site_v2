@@ -88,9 +88,9 @@ const FeaturedPortfolio = () => {
                     }
                 }
             }
-            chestersThumb: file(relativePath: { eq: "Wings-light.jpg" }) {
+            wlionThumb: file(relativePath: { eq: "wlion.png" }) {
                 childImageSharp {
-                    fixed(width: 959, height: 639) {
+                    fixed(width: 500, height: 500) {
                     ...GatsbyImageSharpFixed
                     }
                 }
@@ -201,12 +201,12 @@ const FeaturedPortfolio = () => {
                 <RowTwo id="home_portfolio_row_two">
                     <RowTwoMain>
                         <PortfolioSquare className={"row-two-fadein"}>
-                            <ThumbImg fluid={data.chestersThumb.childImageSharp.fixed} alt={"Chester's BBQ Thumbnail"}/>
+                            <ThumbImg fluid={data.wlionThumb.childImageSharp.fixed} alt={"White Lion Digital Interactive"}/>
                             <HoverCopy>
-                                <a href="https://chestersbbq.com/" target="_blank" rel="noopener noreferrer">
+                                <a href="https://wlion.com/" target="_blank" rel="noopener noreferrer">
                                     <HoverText>
-                                        <h3>Chester's BBQ</h3>
-                                        <p>Restaurant | Order Online</p>
+                                        <h3>White Lion</h3>
+                                        <p>Gatsby.js with WordPress CMS</p>
                                     </HoverText>
                                 </a>
                             </HoverCopy>

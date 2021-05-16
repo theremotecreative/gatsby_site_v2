@@ -38,9 +38,9 @@ const GatsbyPortfolio = () => {
                     }
                 }
             }
-            OPSThumb: file(relativePath: { eq: "Optomi-create-BW.jpg" }) {
+            wlionThumb: file(relativePath: { eq: "wlion.png" }) {
                 childImageSharp {
-                    fixed(width: 1920, height: 1200) {
+                    fixed(width: 500, height: 500) {
                     ...GatsbyImageSharpFixed
                     }
                 }
@@ -63,23 +63,23 @@ const GatsbyPortfolio = () => {
                 </MobileTitle>
                 <RowOne>
                     <PortfolioSquare>
+                        <ThumbImg fluid={data.wlionThumb.childImageSharp.fixed} alt={"White Lion Digital Interactive"}/>
+                        <HoverCopy>
+                            <a href="https://wlion.com/" target="_blank" rel="noopener noreferrer">
+                                <HoverText>
+                                    <h3>White Lion</h3>
+                                    <p>Digital Experience Developers</p>
+                                </HoverText>
+                            </a>
+                        </HoverCopy>
+                    </PortfolioSquare>
+                    <PortfolioSquare>
                         <ThumbImg fluid={data.optomiThumb.childImageSharp.fixed} alt={"Optomi Thumbnail"}/>
                         <HoverCopy>
                             <a href="https://optomi.com/" target="_blank" rel="noopener noreferrer">
                                 <HoverText>
                                     <h3>Optomi</h3>
                                     <p>Technology Consultants</p>
-                                </HoverText>
-                            </a>
-                        </HoverCopy>
-                    </PortfolioSquare>
-                    <PortfolioSquare>
-                        <ThumbImg fluid={data.OPSThumb.childImageSharp.fixed} alt={"Optomi Services Thumbnail"}/>
-                        <HoverCopy>
-                            <a href="https://optomiservices.com/" target="_blank" rel="noopener noreferrer">
-                                <HoverText>
-                                    <h3>Optomi Services</h3>
-                                    <p>Technology Services</p>
                                 </HoverText>
                             </a>
                         </HoverCopy>
